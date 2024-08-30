@@ -1,0 +1,37 @@
+//varibles:
+//colors
+$primary-color:#f1cda4;
+$heading-color:#1073b4;
+$links-color:$heading-color;
+$links-color-hover:#a1d6dd;
+$sub-heading-color:#19171d;
+$body-color:#808081;
+//font
+$body-font:Helvetica, sans-serif;
+//set back grond &tet based on primary color
+@mixin background-color($color){
+    background-color: $color;
+    color: text-color($color);
+}
+$steps:(1,2,3,4,5,6);
+@each $step in $steps{
+
+    .m-#{step}{
+        margin: #{$step*10}px 0;
+    }
+    .my-#{step}{
+        margin: #{$step*10}px 0;
+    }
+    .mx-#{step}{
+        margin: 0#{$step*10}px;
+    }
+    .p-#{step}{
+        padding: #{$step*10}px;
+    }
+    .py-#{step}{
+        padding: #{$step*10}px 0;
+    }
+    .px-#{step}{
+        padding: 0#{$step*10}px ;
+    }
+}
